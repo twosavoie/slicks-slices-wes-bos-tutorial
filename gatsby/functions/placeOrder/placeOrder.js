@@ -41,7 +41,7 @@ function wait(ms = 0) {
 exports.handler = async (event, context) => {
   // await wait(5000);
   const body = JSON.parse(event.body);
-  console.log(body);
+  // console.log(body);
   // check i fthey have filled out the honeypot
   if (body.mapleSyrup) {
     return {
@@ -53,7 +53,7 @@ exports.handler = async (event, context) => {
   const requiredFields = ['email', 'name', 'order'];
 
   for (const field of requiredFields) {
-    console.log(`Checking that ${field} is good`);
+    // console.log(`Checking that ${field} is good`);
     if (!body[field]) {
       return {
         statusCode: 400,
@@ -82,7 +82,7 @@ exports.handler = async (event, context) => {
     subject: 'New order!',
     html: generateOrderEmail({ order: body.order, total: body.total }),
   });
-  console.log(info);
+  // console.log(info);
   return {
     statusCode: 200,
     body: JSON.stringify({ message: 'Success' }),
