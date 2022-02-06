@@ -1,6 +1,3 @@
-const {
-  reporter,
-} = require('gatsby/node_modules/gatsby-cli/lib/reporter/reporter');
 const nodemailer = require('nodemailer');
 
 function generateOrderEmail({ order, total }) {
