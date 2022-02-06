@@ -49,7 +49,7 @@ export default function usePizza({ pizzas, values }) {
       {
         method: 'POST',
         headers: {
-          'Content-Type': 'appplication/json',
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(body),
       }
